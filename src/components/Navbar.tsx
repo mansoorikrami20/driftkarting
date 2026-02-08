@@ -3,11 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 
 const links = [
-  { label: "Карты", href: "#cars" },
+  { label: "Преимущества", href: "#benefits" },
   { label: "Цены", href: "#pricing" },
+  { label: "Карты", href: "#cars" },
   { label: "Условия", href: "#conditions" },
   { label: "Отзывы", href: "#reviews" },
-  { label: "Контакты", href: "#contacts" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 const Navbar = () => {
@@ -20,12 +21,12 @@ const Navbar = () => {
           ДРИФТ <span className="text-primary">КАРТИНГ</span>
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="font-heading text-sm text-muted-foreground hover:text-primary transition-colors tracking-wider"
+              className="font-heading text-xs text-muted-foreground hover:text-primary transition-colors tracking-wider"
             >
               {l.label}
             </a>
@@ -40,7 +41,7 @@ const Navbar = () => {
         </div>
 
         <button
-          className="md:hidden text-foreground"
+          className="lg:hidden text-foreground"
           onClick={() => setOpen(!open)}
         >
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -53,7 +54,7 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden bg-background border-b border-border overflow-hidden"
+            className="lg:hidden bg-background border-b border-border overflow-hidden"
           >
             <div className="px-4 py-4 flex flex-col gap-3">
               {links.map((l) => (
