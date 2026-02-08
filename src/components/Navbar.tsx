@@ -6,6 +6,7 @@ const links = [
   { label: "Карты", href: "#cars" },
   { label: "Цены", href: "#pricing" },
   { label: "Условия", href: "#conditions" },
+  { label: "Отзывы", href: "#reviews" },
   { label: "Контакты", href: "#contacts" },
 ];
 
